@@ -1,6 +1,8 @@
-# Stock reference imagery
+# Mayor Joe portfolio assets
 
-All photographs are illustrative stock imagery from Unsplash. They are not supplied client work, AI-generated portfolio outputs, or portraits of the portfolio owner. Replace them with approved portfolio assets before representing projects as completed work.
+The portrait at `public/images/mayor-joe.webp` is based on the photograph supplied by Mayor Joe in this conversation. It represents the portfolio owner and is used as supplied personal branding material.
+
+The project and comparison photographs below are illustrative stock imagery from Unsplash. They are not supplied client work, AI-generated portfolio outputs, or portraits of the portfolio owner. Replace them with approved portfolio assets before representing projects as completed work.
 
 - `project-otherworld.jpg`: https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1400&q=85
 - `project-velocity.jpg`: https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=85
@@ -30,3 +32,7 @@ Alt descriptions:
 `assets/video/` contains six six-second H.264 960 × 600 silent clips and an eighteen-second `hero-reel.mp4` montage. These are subtle pan/zoom animations of the stock reference photographs listed above, rendered locally with FFmpeg. They are illustrative animated stock reference imagery, not finished AI films, authentic client work, or actual delivered portfolio projects. Replace with original approved video work before removing sample disclosures. Files use fast-start MP4 metadata and together total approximately 2.6 MB.
 
 The hero montage sequences otherworld, velocity, and after-hours. Each individual clip uses the same slug as its matching sample project.
+
+### Mayor Joe portrait preparation
+
+`public/images/mayor-joe.webp` is a web-optimized, AI-prepared derivative of the portrait attached by Mayor Joe in this conversation. The inline attachment was not exposed as an original downloadable file in the execution workspace. The preparation retains his identity, grayscale presentation, wardrobe, composition, and EAZZY STUDIOS photographer watermark; it is not a byte-identical copy of the original. Generated source PNG is retained in the task workspace.

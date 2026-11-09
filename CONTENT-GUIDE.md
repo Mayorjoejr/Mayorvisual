@@ -1,10 +1,10 @@
-# Make FRAME / SHIFT yours
+# Customize Mayor Joe’s portfolio
 
-FRAME / SHIFT is an editable studio-name placeholder. The starter biography, imagery, project treatments, and tool entries are illustrative. They do not establish work history, ownership of a finished film, client relationships, tool proficiency, availability, awards, or performance results.
+Mayor Joe is the owner-supplied brand name, and the portrait is owner-supplied. The starter biography, stock project imagery, project treatments, and tool entries are illustrative. They do not establish work history, ownership of a finished film, client relationships, tool proficiency, availability, awards, or performance results.
 
 ## Edit the portfolio
 
-Edit the exported data in `data/content.ts`. Replace the studio name, biography, availability, SEO text, and image paths. Add owned or licensed files to `public/images` and `public/videos`; reference them from the site root, for example `/videos/my-film.mp4`.
+Edit the exported data in `data/content.ts`. Update the biography, availability, SEO text, and media as needed. The current name and portrait are Mayor Joe’s supplied brand assets. Add owned or licensed files to `public/images` and `public/videos`; reference them from the site root, for example `/videos/my-film.mp4`.
 
 Each project has a unique `slug` for its detail-page URL. Keep slugs lowercase and hyphenated. Project categories must match a filter label in `categories`. Add, remove, or reorder objects in `projects` to change the gallery without changing its layout. Keep `sample: true` for illustrative entries; set it to false only after replacing the images, copy, and media with real work. Use accurate credits and client or personal-project designations. The case-study challenge, concept, process, and outcome fields are independently editable.
 
@@ -32,7 +32,7 @@ Populate `contacts.email` and only the social or booking URLs you want to displa
 
 ## Biography and proof
 
-Replace the illustrative studio image with your own portrait or workspace. Keep achievements empty until accurate details are available. Provide a real file in `studio.mediaKitUrl` to enable a download link. Keep `testimonials` empty until genuine, approved quotes are supplied; add company names, project links, video testimonials, and logos only with permission. The testimonial area must remain hidden while the array is empty.
+The About portrait uses a web-prepared derivative of Mayor Joe’s supplied photograph, documented in `ASSET-SOURCES.md`. Replace it only with another approved portrait or workspace image. Keep achievements empty until accurate details are available. Provide a real file in `studio.mediaKitUrl` to enable a download link. Keep `testimonials` empty until genuine, approved quotes are supplied; add company names, project links, video testimonials, and logos only with permission. The testimonial area must remain hidden while the array is empty.
 
 ## SEO and final review
 
@@ -40,7 +40,7 @@ Set the production origin used by the site's canonical metadata and sitemap to t
 
 ## Starter motion and imagery
 
-The included MP4 files are silent pan/zoom animations of stock photographs. They demonstrate video functionality; they are not completed AI films or client work. Sources are recorded in `ASSET-SOURCES.md`. Replace these clips before presenting a finished portfolio. Set `studio.heroMediaIsSample`, `studio.portraitIsSample`, `studio.bioIsPlaceholder`, and `studio.identityIsPlaceholder` to false only as you replace the relevant content. Update `heroImageAlt`, `portraitAlt`, and `showreelDescription` with your media. The comparison slider is an illustrative CSS color treatment of one stock photograph, not a documented client transformation.
+Mayor Joe’s supplied portrait is displayed as personal imagery and is excluded from stock-image sample disclosures. The included MP4 files are silent pan/zoom animations of stock photographs. They demonstrate video functionality; they are not completed AI films or client work. Sources are recorded in `ASSET-SOURCES.md`. Replace these clips before presenting a finished portfolio. Set `studio.heroMediaIsSample`, `studio.portraitIsSample`, `studio.bioIsPlaceholder`, and `studio.identityIsPlaceholder` to false only as you replace the relevant content. Update `heroImageAlt`, `portraitAlt`, and `showreelDescription` with your media. The comparison slider is an illustrative CSS color treatment of one stock photograph, not a documented client transformation.
 
 ## Local development and publication
 

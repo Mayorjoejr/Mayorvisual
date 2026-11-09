@@ -1,4 +1,4 @@
-# FRAME / SHIFT
+# Mayor Joe
 
 A cinematic AI filmmaking portfolio built with Next.js 15, TypeScript, React and custom responsive CSS. Static pages are generated for the homepage, six project case studies, sitemap and robots file. No server or database is required.
 
@@ -14,7 +14,7 @@ The production build is exported to `out/`. `.openai/hosting.json` retains the S
 
 ## Customize
 
-Start with [CONTENT-GUIDE.md](CONTENT-GUIDE.md). All project records, media URLs, services, biography, tools, testimonials, contacts and SEO metadata live in `data/content.ts`. Media files live in `public/`. Empty contacts and testimonials stay hidden. The starter studio identity and all sample projects must be replaced or remain labeled as examples.
+Start with [CONTENT-GUIDE.md](CONTENT-GUIDE.md). All project records, media URLs, services, biography, tools, testimonials, contacts and SEO metadata live in `data/content.ts`. Media files live in `public/`. Empty contacts and testimonials stay hidden. The Mayor Joe brand and portrait were supplied by the owner. Sample projects must remain labeled as examples until replaced with approved work.
 
 The supplied silent videos are slow-motion animations of stock photographs, demonstrating the video experience. They are not real client commissions or completed AI films. See [ASSET-SOURCES.md](ASSET-SOURCES.md) for sources.
 
@@ -32,4 +32,4 @@ The optimized production build and TypeScript checks passed. Export checks verif
 
 ## Downloadable single-file edition
 
-Visit `/download/` for the self-contained `frame-shift.html` download (about 6.4 MB). It embeds styles, fonts, imagery, videos, and all six case studies. It works directly from the local filesystem with classic inline JavaScript and hash-based project navigation. Inquiry briefs download locally; email delivery is not configured. The exported file is a snapshot, so regenerate it after changing portfolio content.
+Visit `/download/` for the self-contained `mayor-joe.html` download (with all media embedded). It embeds styles, fonts, imagery, videos, and all six case studies. It works directly from the local filesystem with classic inline JavaScript and hash-based project navigation. Inquiry briefs download locally; email delivery is not configured. The exported file is a snapshot, so regenerate it after changing portfolio content.

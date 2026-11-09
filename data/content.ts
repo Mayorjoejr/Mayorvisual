@@ -21,9 +21,9 @@ export type Project = {
 };
 
 export const studio = {
-  name: 'FRAME / SHIFT',
-  shortName: 'FRAME/SHIFT',
-  identityIsPlaceholder: true,
+  name: 'Mayor Joe',
+  shortName: 'MAYOR JOE',
+  identityIsPlaceholder: false,
   profession: 'AI Filmmaker / Video Editor',
   tagline: 'Where imagination becomes motion.',
   heroEyebrow: "I DON'T JUST EDIT VIDEOS.",
@@ -38,11 +38,11 @@ export const studio = {
   heroVideoUrl: '/videos/hero-reel.mp4',
   showreelVideoUrl: '/videos/hero-reel.mp4',
   showreelEmbedUrl: '',
-  portrait: '/images/studio.webp',
-  portraitAlt: 'Warmly lit creative studio with mixing desk and guitars, stock reference photograph',
-  portraitIsSample: true,
+  portrait: '/images/mayor-joe.webp',
+  portraitAlt: 'Mayor Joe, AI filmmaker and video editor',
+  portraitIsSample: false,
   bio: [
-    "I'm an AI video editor and creative storyteller passionate about creating visuals that challenge what people believe is possible.",
+    "I'm Mayor Joe, an AI video editor and creative storyteller passionate about creating visuals that challenge what people believe is possible.",
     'I combine emerging AI technology with cinematic editing, visual storytelling, and thoughtful creative direction to transform ideas into experiences that make people stop, watch, and remember.',
     "For me, technology is not the creativity. It's the canvas.",
   ],
@@ -175,7 +175,7 @@ export const contacts = {
 
 export const seo = {
   siteUrl: 'https://frame-shift-cinema.maplespice128.chatgpt.site',
-  title: 'FRAME / SHIFT — AI Filmmaking & Cinematic Video Editing',
-  description: 'A cinematic AI video editing portfolio. Explore original visual concepts, AI commercial directions, product animation, and creative storytelling.',
-  socialImage: '/images/hero.webp',
+  title: 'Mayor Joe — AI Filmmaker & Creative Video Editor',
+  description: 'Explore Mayor Joe’s cinematic AI video editing portfolio, visual concepts, AI commercial directions, product animation, and creative storytelling.',
+  socialImage: '/images/mayor-joe.webp',
 };

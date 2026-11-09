@@ -1,5 +1,4 @@
 import { studio } from '@/data/content';
 export default function Brand() {
-  const parts=studio.name.split('/');
-  return <span className="brand"><svg aria-hidden="true" viewBox="0 0 30 30" width="28" height="28"><path d="M2 10V2h8M20 2h8v8M28 20v8h-8M10 28H2v-8" fill="none" stroke="currentColor" strokeWidth="3"/><path d="m11 10 9 5-9 5z" fill="currentColor"/></svg><span>{parts.map((part,i)=><span key={i}>{i>0&&<span className="brand-slash">/</span>}{part.trim()}</span>)}</span></span>;
+  return <span className="brand"><span className="brand-monogram" aria-hidden="true"><svg viewBox="0 0 40 40" width="32" height="32" fill="none"><path d="M5 28V12l8 9 8-9v16M26 12h9v10c0 5-3 7-7 7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="square" strokeLinejoin="miter"/></svg></span><span className="brand-wordmark">{studio.name}</span><span className="brand-dot" aria-hidden="true">.</span></span>;
 }

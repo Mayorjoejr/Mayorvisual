@@ -80,7 +80,7 @@ export default function ContactForm({ initialType = '' }: ContactFormProps) {
       const objectUrl = URL.createObjectURL(new Blob([brief], { type: 'text/plain;charset=utf-8' }));
       const download = document.createElement('a');
       download.href = objectUrl;
-      download.download = 'frame-shift-project-brief.txt';
+      download.download = 'mayor-joe-project-brief.txt';
       document.body.appendChild(download);
       download.click();
       download.remove();
