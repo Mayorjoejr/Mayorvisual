@@ -28,7 +28,7 @@ export const studio = {
   tagline: 'Where imagination becomes motion.',
   heroEyebrow: "I DON'T JUST EDIT VIDEOS.",
   heroTitle: "I CREATE WHAT DOESN'T EXIST.",
-  heroDescription: 'From impossible worlds to unforgettable brand stories, I blend AI filmmaking, cinematic editing, and creative direction to turn bold ideas into extraordinary moving visuals.',
+  heroDescription: 'Give your product, brand, or bold idea a story worth watching. I combine cinematic editing, AI visuals, and creative direction to make the value clear—and the next step easy to see.',
   availability: 'Open for creative collaborations',
   availabilityConfirmed: false,
   heroImage: '/images/hero.webp',
@@ -46,7 +46,7 @@ export const studio = {
     'I combine emerging AI technology with cinematic editing, visual storytelling, and thoughtful creative direction to transform ideas into experiences that make people stop, watch, and remember.',
     "For me, technology is not the creativity. It's the canvas.",
   ],
-  bioIsPlaceholder: true,
+  bioIsPlaceholder: false,
   philosophy: 'Human imagination. New possibilities. Every frame with purpose.',
   achievements: [] as string[],
   mediaKitUrl: '',
@@ -164,7 +164,7 @@ export const tools = [
   { name: 'ElevenLabs', role: 'Voice exploration', sample: true, verified: false },
 ];
 
-export type Testimonial = { quote: string; name: string; role?: string; company?: string; projectUrl?: string; videoUrl?: string; logoUrl?: string };
+export type Testimonial = { approved?: boolean; quote: string; name: string; role?: string; company?: string; projectUrl?: string; videoUrl?: string; logoUrl?: string };
 export const testimonials: Testimonial[] = [];
 
 export const contacts = {
@@ -176,6 +176,6 @@ export const contacts = {
 export const seo = {
   siteUrl: 'https://frame-shift-cinema.maplespice128.chatgpt.site',
   title: 'Mayor Joe — AI Filmmaker & Creative Video Editor',
-  description: 'Explore Mayor Joe’s cinematic AI video editing portfolio, visual concepts, AI commercial directions, product animation, and creative storytelling.',
+  description: 'Build your next product video, social campaign, or brand film with Mayor Joe. Explore creative directions, compare treatments, and plan a clear video project brief.',
   socialImage: '/images/mayor-joe.webp',
 };

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import './fonts.css';
 import './globals.css';
 import './personal.css';
+import './sales.css';
 import MotionEffects from '@/components/MotionEffects';
 import { seo, studio } from '@/data/content';
 const origin=seo.siteUrl;

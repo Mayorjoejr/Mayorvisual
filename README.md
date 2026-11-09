@@ -33,3 +33,7 @@ The optimized production build and TypeScript checks passed. Export checks verif
 ## Downloadable single-file edition
 
 Visit `/download/` for the self-contained `mayor-joe.html` download (with all media embedded). It embeds styles, fonts, imagery, videos, and all six case studies. It works directly from the local filesystem with classic inline JavaScript and hash-based project navigation. Inquiry briefs download locally; email delivery is not configured. The exported file is a snapshot, so regenerate it after changing portfolio content.
+
+## Sales flow and proof
+
+The homepage now includes a goal-based offer builder, format selection, before-and-after demonstrations, sample creative blueprints, cited industry research, FAQs, and project-brief prefilling. See [SALES-SETUP.md](SALES-SETUP.md) to configure prices, approved payment links, inquiry delivery, genuine testimonials, and measured client case studies. Checkout and client testimonials stay hidden until the required real content is supplied. Industry survey figures are sourced separately and are not presented as Mayor Joe results.

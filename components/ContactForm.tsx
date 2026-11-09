@@ -2,9 +2,11 @@
 
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react';
 import { contacts, services, studio } from '@/data/content';
+import { mergeBriefTemplate, removeBriefTemplate } from '@/lib/brief';
 
 type ContactFormProps = { initialType?: string };
 type SubmissionResult = { delivered?: boolean; accepted?: boolean; ok?: boolean; message?: string };
+type ProjectSelection = { packageName: string; goal: string; formats: string[] };
 
 /**
  * Endpoint contract: POST JSON with name, email, company, projectType, budget,
@@ -16,6 +18,9 @@ type SubmissionResult = { delivered?: boolean; accepted?: boolean; ok?: boolean;
 export default function ContactForm({ initialType = '' }: ContactFormProps) {
   const formId = useId();
   const typeRef = useRef<HTMLSelectElement>(null);
+  const descriptionRef = useRef<HTMLTextAreaElement>(null);
+  const autoBrief = useRef('');
+  const [selection, setSelection] = useState<ProjectSelection>({ packageName: '', goal: '', formats: [] });
   const [projectType, setProjectType] = useState(initialType);
   const [busy, setBusy] = useState(false);
   const [status, setStatus] = useState('');
@@ -30,11 +35,24 @@ export default function ContactForm({ initialType = '' }: ContactFormProps) {
       if (typeof nextType !== 'string') return;
       const match = services.find(service => service.inquiryType === nextType || service.title === nextType);
       if (match) setProjectType(match.inquiryType);
+      setSelection({ packageName: '', goal: '', formats: [] });
+      if(descriptionRef.current)descriptionRef.current.value=removeBriefTemplate(descriptionRef.current.value,autoBrief.current);
+      autoBrief.current='';
       setStatus('');
       typeRef.current?.focus({ preventScroll: true });
     };
     window.addEventListener('project-type', selectType);
-    return () => window.removeEventListener('project-type', selectType);
+    const selectOffer = (event: Event) => {
+      const detail = (event as CustomEvent<Partial<ProjectSelection> & {projectType?:string;description?:string}>).detail;
+      if (!detail || typeof detail.packageName !== 'string' || !services.some(service => service.inquiryType === detail.projectType)) return;
+      setProjectType(detail.projectType!);
+      setSelection({packageName:detail.packageName,goal:typeof detail.goal==='string'?detail.goal:'',formats:Array.isArray(detail.formats)?detail.formats.filter((format):format is string=>typeof format==='string'):[]});
+      if (descriptionRef.current && typeof detail.description === 'string') {descriptionRef.current.value = mergeBriefTemplate(descriptionRef.current.value,autoBrief.current,detail.description);autoBrief.current=detail.description;}
+      setStatus(''); setError(false);
+      descriptionRef.current?.focus({preventScroll:true});
+    };
+    window.addEventListener('project-request',selectOffer);
+    return () => {window.removeEventListener('project-type', selectType);window.removeEventListener('project-request',selectOffer);};
   }, []);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
@@ -51,6 +69,9 @@ export default function ContactForm({ initialType = '' }: ContactFormProps) {
       budget: String(fields.get('budget') ?? ''),
       deadline: String(fields.get('deadline') ?? ''),
       description: String(fields.get('description') ?? '').trim(),
+      packageName: String(fields.get('packageName') ?? '').trim(),
+      goal: String(fields.get('goal') ?? '').trim(),
+      formats: String(fields.get('formats') ?? '').trim(),
       website: String(fields.get('website') ?? ''),
     };
     setStatus('');
@@ -70,6 +91,7 @@ export default function ContactForm({ initialType = '' }: ContactFormProps) {
         `Email: ${inquiry.email}`,
         `Company / Brand: ${inquiry.company || 'Not provided'}`,
         `Project type: ${inquiry.projectType}`,
+        ...(inquiry.packageName ? [`Project starting point: ${inquiry.packageName}`, `Goal: ${inquiry.goal}`, `Delivery formats: ${inquiry.formats}`] : []),
         `Estimated budget: ${inquiry.budget}`,
         `Expected deadline: ${inquiry.deadline || 'To be discussed'}`,
         '',
@@ -126,6 +148,10 @@ export default function ContactForm({ initialType = '' }: ContactFormProps) {
 
   return (
     <form className="contact-form" onSubmit={submit} aria-describedby={`${formId}-note`}>
+      <div className="sales-form-selection" hidden={!selection.packageName} aria-live="polite">
+        <p className="eyebrow">YOUR CHOSEN DIRECTION</p><strong data-summary-package>{selection.packageName}</strong><span><span data-summary-goal>{selection.goal}</span><span aria-hidden="true"> / </span><span data-summary-formats>{selection.formats.join(' + ')}</span></span><p>Add your idea, audience, and any useful links below.</p>
+      </div>
+      <input type="hidden" name="packageName" value={selection.packageName}/><input type="hidden" name="goal" value={selection.goal}/><input type="hidden" name="formats" value={selection.formats.join(', ')}/>
       <div className="form-grid">
         <div className="field">
           <label htmlFor={`${formId}-name`}>Full name <span aria-hidden="true">*</span></label>
@@ -141,14 +167,14 @@ export default function ContactForm({ initialType = '' }: ContactFormProps) {
         </div>
         <div className="field">
           <label htmlFor={`${formId}-type`}>Project type <span aria-hidden="true">*</span></label>
-          <select ref={typeRef} id={`${formId}-type`} name="projectType" value={projectType} onChange={event => setProjectType(event.target.value)} required>
+          <select ref={typeRef} id={`${formId}-type`} name="projectType" value={projectType} onChange={event => {setProjectType(event.target.value);setSelection({packageName:'',goal:'',formats:[]});if(descriptionRef.current)descriptionRef.current.value=removeBriefTemplate(descriptionRef.current.value,autoBrief.current);autoBrief.current='';}} required>
             <option value="" disabled>Select a project type</option>
             {services.map(service => <option key={service.id} value={service.inquiryType}>{service.title}</option>)}
             <option value="Something else">Something else / Let's discuss</option>
           </select>
         </div>
         <div className="field">
-          <label htmlFor={`${formId}-budget`}>Estimated budget <span aria-hidden="true">*</span></label>
+          <label htmlFor={`${formId}-budget`}>Budget range (USD) <span aria-hidden="true">*</span></label>
           <select id={`${formId}-budget`} name="budget" required defaultValue="">
             <option value="" disabled>Select a budget range</option>
             <option value="Under $1,000 USD">Under $1,000 USD</option>
@@ -165,7 +191,7 @@ export default function ContactForm({ initialType = '' }: ContactFormProps) {
         </div>
         <div className="field span-full">
           <label htmlFor={`${formId}-description`}>Tell me about your idea <span aria-hidden="true">*</span></label>
-          <textarea id={`${formId}-description`} name="description" placeholder="The vision, the feeling, the impossible part. I'd love to hear it." rows={4} required minLength={20} maxLength={10000} />
+          <textarea ref={descriptionRef} id={`${formId}-description`} name="description" placeholder="What are you launching, who is it for, and what should viewers do next?" rows={4} required minLength={20} maxLength={10000} />
         </div>
         <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}>
           <label htmlFor={`${formId}-website`}>Leave this field empty</label>
