@@ -29,3 +29,7 @@ Semantic landmarks, skip navigation, native dialog focus management, named dialo
 ## Verification
 
 The optimized production build and TypeScript checks passed. Export checks verified local links, assets, anchor targets, unique project metadata, heading counts, image alt text and form/ARIA references. MP4 codec and duration were checked with ffprobe. Browser control was unavailable in the task environment; responsive visual and browser interaction QA remains unverified.
+
+## Downloadable single-file edition
+
+Visit `/download/` for the self-contained `frame-shift.html` download (about 6.4 MB). It embeds styles, fonts, imagery, videos, and all six case studies. It works directly from the local filesystem with classic inline JavaScript and hash-based project navigation. Inquiry briefs download locally; email delivery is not configured. The exported file is a snapshot, so regenerate it after changing portfolio content.
