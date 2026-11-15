@@ -1,6 +1,6 @@
 # Customize Mayor Joe’s portfolio
 
-Mayor Joe is the owner-supplied brand name, and the portrait is owner-supplied. The starter biography, stock project imagery, project treatments, and tool entries are illustrative. They do not establish work history, ownership of a finished film, client relationships, tool proficiency, availability, awards, or performance results.
+Mayor Joe is the owner-supplied brand name, and the portrait is owner-supplied. The gallery now uses eight supplied videos; their original filenames and Drive links are retained. The editable service copy and suggested tool entries do not establish additional credentials. They do not establish work history, ownership of a finished film, client relationships, tool proficiency, availability, awards, or performance results.
 
 ## Edit the portfolio
 
@@ -40,8 +40,12 @@ Set the production origin used by the site's canonical metadata and sitemap to t
 
 ## Starter motion and imagery
 
-Mayor Joe’s supplied portrait is displayed as personal imagery and is excluded from stock-image sample disclosures. The included MP4 files are silent pan/zoom animations of stock photographs. They demonstrate video functionality; they are not completed AI films or client work. Sources are recorded in `ASSET-SOURCES.md`. Replace these clips before presenting a finished portfolio. Set `studio.heroMediaIsSample`, `studio.portraitIsSample`, `studio.bioIsPlaceholder`, and `studio.identityIsPlaceholder` to false only as you replace the relevant content. Update `heroImageAlt`, `portraitAlt`, and `showreelDescription` with your media. The comparison slider is an illustrative CSS color treatment of one stock photograph, not a documented client transformation.
+Mayor Joe’s supplied portrait is displayed as personal imagery and is excluded from stock-image sample disclosures. The selected full films are supplied video samples with their original video and audio preserved in web-friendly MP4 containers. Short silent excerpts power hover previews. The offline HTML contains compact full-length variants. Keep source links and sample labels unless you add approved production credits. The comparison slider is an illustrative CSS color treatment of one stock photograph, not a documented client transformation.
 
 ## Local development and publication
 
 Run `npm ci` then `npm run dev` to develop. Run `npm run build` to export all pages into `out/`. Hosting identity is preserved in `.openai/hosting.json`. Set `seo.siteUrl` in `data/content.ts` to update the canonical origin, structured data, sitemap, and robots configuration together.
+
+## Selected Drive videos
+
+The eight featured records in `data/content.ts` follow the filenames in the AI Video Samplings folder. Keep `originalFilename`, `driveUrl`, and `sampleKind: provided` when replacing descriptions or thumbnails. `videoUrl` points to the full film; `previewUrl` is a short silent hover loop. Preserve native aspect ratio through `format`, `width`, and `height`. `collection.folderUrl` supplies the View more link. Main files and previews live in `public/media/`; the single-file download contains a separate compact edition of each complete film for offline portability. Source collection access was not modified.

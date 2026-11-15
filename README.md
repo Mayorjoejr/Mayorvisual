@@ -1,6 +1,6 @@
 # Mayor Joe
 
-A cinematic AI filmmaking portfolio built with Next.js 15, TypeScript, React and custom responsive CSS. Static pages are generated for the homepage, six project case studies, sitemap and robots file. No server or database is required.
+A cinematic AI filmmaking portfolio built with Next.js 15, TypeScript, React and custom responsive CSS. Static pages are generated for the homepage, eight film pages, sitemap and robots file. No server or database is required.
 
 ## Run
 
@@ -14,9 +14,9 @@ The production build is exported to `out/`. `.openai/hosting.json` retains the S
 
 ## Customize
 
-Start with [CONTENT-GUIDE.md](CONTENT-GUIDE.md). All project records, media URLs, services, biography, tools, testimonials, contacts and SEO metadata live in `data/content.ts`. Media files live in `public/`. Empty contacts and testimonials stay hidden. The Mayor Joe brand and portrait were supplied by the owner. Sample projects must remain labeled as examples until replaced with approved work.
+Start with [CONTENT-GUIDE.md](CONTENT-GUIDE.md). All project records, media URLs, services, biography, tools, testimonials, contacts and SEO metadata live in `data/content.ts`. Media files live in `public/`. Empty contacts and testimonials stay hidden. The Mayor Joe brand and portrait were supplied by the owner. Provided samples retain their original filenames and source links; brand names do not establish client relationships.
 
-The supplied silent videos are slow-motion animations of stock photographs, demonstrating the video experience. They are not real client commissions or completed AI films. See [ASSET-SOURCES.md](ASSET-SOURCES.md) for sources.
+Eight selected videos from the owner-identified AI Video Samplings Drive folder are included with real-frame posters, lightweight silent hover previews, and full films with audio. Titles and categories follow the source filenames. The gallery identifies these as provided samples rather than verified client commissions. See [ASSET-SOURCES.md](ASSET-SOURCES.md) for the exact sources.
 
 ## Inquiry delivery
 
@@ -32,8 +32,12 @@ The optimized production build and TypeScript checks passed. Export checks verif
 
 ## Downloadable single-file edition
 
-Visit `/download/` for the self-contained `mayor-joe.html` download (with all media embedded). It embeds styles, fonts, imagery, videos, and all six case studies. It works directly from the local filesystem with classic inline JavaScript and hash-based project navigation. Inquiry briefs download locally; email delivery is not configured. The exported file is a snapshot, so regenerate it after changing portfolio content.
+Visit `/download/` for the self-contained `mayor-joe.html` download (with all media embedded). It embeds styles, fonts, imagery, videos, and all eight film pages. The offline edition uses compact encodes for portability; the online portfolio retains the higher-quality versions. It works directly from the local filesystem with classic inline JavaScript and hash-based project navigation. Inquiry briefs download locally; email delivery is not configured. The exported file is a snapshot, so regenerate it after changing portfolio content.
 
 ## Sales flow and proof
 
-The homepage now includes a goal-based offer builder, format selection, before-and-after demonstrations, sample creative blueprints, cited industry research, FAQs, and project-brief prefilling. See [SALES-SETUP.md](SALES-SETUP.md) to configure prices, approved payment links, inquiry delivery, genuine testimonials, and measured client case studies. Checkout and client testimonials stay hidden until the required real content is supplied. Industry survey figures are sourced separately and are not presented as Mayor Joe results.
+The homepage now includes a goal-based offer builder, format selection, before-and-after demonstrations, film notes from the selected collection, cited industry research, FAQs, and project-brief prefilling. See [SALES-SETUP.md](SALES-SETUP.md) to configure prices, approved payment links, inquiry delivery, genuine testimonials, and measured client case studies. Checkout and client testimonials stay hidden until the required real content is supplied. Industry survey figures are sourced separately and are not presented as Mayor Joe results.
+
+## Curated video collection
+
+The homepage features eight videos selected from18 supplied files, organized as AI Commercials, AI Storytelling, Documentary, Motion Graphics, Animation, and Faceless Content. Full web films, silent previews, and real-frame posters live in `public/media/`. The prominent View more button opens the original Drive folder without changing its sharing settings. No awards, client commissions, or measured results are inferred from the supplied filenames or brand names.

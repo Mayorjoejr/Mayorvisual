@@ -10,10 +10,10 @@ export default function DownloadPage(){
     <div className="download-content">
       <p className="eyebrow"><span className="status-dot"/> READY TO TAKE WITH YOU</p>
       <h1>YOUR PORTFOLIO.<br/><span>ONE HTML FILE.</span></h1>
-      <p className="download-intro">The complete cinematic experience, ready to open in your browser. No installation, server, or internet connection needed.</p>
+      <p className="download-intro">The complete portfolio in one portable file, with compact videos embedded for offline playback. No installation or server needed.</p>
       <a className="button button-primary download-file" href="/downloads/mayor-joe.html" download="mayor-joe.html"><ArrowDownToLine size={18}/> Download HTML <span>Single file</span></a>
-      <ul>{['Embedded images, fonts, and videos','All six project case studies','Filters, comparison slider, and mobile navigation'].map(item=><li key={item}><Check size={14}/>{item}</li>)}</ul>
-      <p className="download-note">After downloading, double-click <strong>mayor-joe.html</strong> to open it.<br/>The inquiry form prepares a local brief; it does not send a message.</p>
+      <ul>{['Embedded images, fonts, and videos','Eight selected videos and their film notes','Quick-play gallery, filters, and project planner'].map(item=><li key={item}><Check size={14}/>{item}</li>)}</ul>
+      <p className="download-note">After downloading, double-click <strong>mayor-joe.html</strong> to open it.<br/>Compact video edition. Full-quality films are available in the online portfolio and Drive archive. The inquiry form saves briefs locally.</p>
       <a href="/" className="text-link"><ArrowLeft size={15}/> Back to the website</a>
     </div>
     <p className="download-footer">MAYOR JOE — WHERE IMAGINATION BECOMES MOTION.</p>

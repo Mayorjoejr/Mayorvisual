@@ -1,38 +1,50 @@
 # Mayor Joe portfolio assets
 
-The portrait at `public/images/mayor-joe.webp` is based on the photograph supplied by Mayor Joe in this conversation. It represents the portfolio owner and is used as supplied personal branding material.
+## Selected video collection
 
-The project and comparison photographs below are illustrative stock imagery from Unsplash. They are not supplied client work, AI-generated portfolio outputs, or portraits of the portfolio owner. Replace them with approved portfolio assets before representing projects as completed work.
+Source folder: [AI Video Samplings](https://drive.google.com/drive/folders/1lL-UokaQRUVwCd4JxJ-IOW9RoirltGw6). Eighteen video files were available for review; eight were selected on 15 November 2026 for visual clarity, variety, and suitability for the gallery.
 
-- `project-otherworld.jpg`: https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1400&q=85
-- `project-velocity.jpg`: https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=85
-- `project-objects-in-motion.jpg`: https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1400&q=85
-- `project-after-hours.jpg`: https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1400&q=85
-- `project-resonance.jpg`: https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=85
-- `project-liquid-light.jpg`: https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1400&q=85
-- `about.jpg`: https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1400&q=85
-- `comparison.jpg`: https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=85
+These are videos supplied for portfolio use by the user. Their filenames and source links are retained in `data/content.ts`. They are labeled video samples; the selection does not establish a commissioned client relationship, a particular production tool, or measured campaign performance. Brand names within the footage identify the subject of the supplied sample.
 
+The table records native dimensions and durations of the downloaded originals. The website uses optimized delivery copies; the original files in Drive were not renamed, edited, moved, or re-shared.
 
-Optimized delivery versions: matching `.webp` filenames. Portfolio images and comparison: 1400 × 875; about: 1000 × 1250.
+| Website slug | Original filename and Drive source | Original duration | Native frame |
+| --- | --- | ---: | --- |
+| `bombay-kitchen` | [Bombay Kitchen.mov](https://drive.google.com/file/d/1U6wgy3DDsRqoqnnO1xLk8YTheU__7oUj/view?usp=drivesdk) | 25.819 s | 1000 × 562 |
+| `ai-storytelling-reels` | [AI Storytelling Video Ad for Instagram Reels  Consistent AI Character.mp4](https://drive.google.com/file/d/1TA5cy2eUdQrJ26ZRJ6mtz9dXo1FNRSqQ/view?usp=drivesdk) | 60.186 s | 720 × 1280 |
+| `documentary-video-05` | [Documentary Video  (5).mp4](https://drive.google.com/file/d/1sfOnxSkuaHrCecbRol9NrB2kzOeuKbzt/view?usp=drivesdk) | 77.367 s | 720 × 1280 |
+| `youtube-motion-graphic-02` | [YouTube Short Motion Graphic 2.mp4](https://drive.google.com/file/d/1TCBwzG4ksuIZu_1YyutpAVnJ9Jiqz6N3/view?usp=drivesdk) | 14.527 s | 1280 × 720 |
+| `popin-jobs` | [AI Video Ad for Popin Jobs Modern Job Search Platform Commercial.mov](https://drive.google.com/file/d/1sIhCXUcY6kdb6bUtmdxSTkRXMkz9A_zL/view?usp=drivesdk) | 22.174 s | 720 × 1280 |
+| `ai-christmas-animation` | [AI CHRISTMAS  ANIMATED VIDEO.mp4](https://drive.google.com/file/d/1Rnl--g2Nx6t2JeqfqvzGtSgW3qX_D1aB/view?usp=drivesdk) | 21.739 s | 1000 × 562 |
+| `documentary-video-03` | [Documentary Video  (3).mp4](https://drive.google.com/file/d/1meroYe46XC0koxIIBcYgYB3UATwAScpi/view?usp=drivesdk) | 79.155 s | 576 × 1024 |
+| `ai-faceless-video` | [AI FACELESS VIDEO.mp4](https://drive.google.com/file/d/1Fq8pgCPg6mfNWiGMrv7TMviVeCkABmc7/view?usp=drivesdk) | 63.232 s | 1000 × 562 |
 
-Alt descriptions:
-- otherworld: Earth’s curved horizon above white clouds, viewed from orbit.
-- velocity: Dark sports car on an open road.
-- objects-in-motion: Black over-ear headphones on a pale surface.
-- after-hours: Rain-soaked city street at dusk, reflecting lights.
-- resonance: Singer on a smoky stage raising one arm.
-- liquid-light: Flowing violet, coral, and cyan abstract forms.
-- about: Warm-lit music studio with instruments and mixing desk; represents a creative studio, not owner likeness.
-- comparison: Layered mountain silhouettes fading into a warm horizon.
+## Delivery assets
 
+Each selected item maps to these local website paths:
 
-## Motion assets
+- Full video: `public/media/films/<slug>.mp4`
+- Silent hover preview: `public/media/previews/<slug>.mp4`
+- Poster frame: `public/media/posters/<slug>.webp`
 
-`assets/video/` contains six six-second H.264 960 × 600 silent clips and an eighteen-second `hero-reel.mp4` montage. These are subtle pan/zoom animations of the stock reference photographs listed above, rendered locally with FFmpeg. They are illustrative animated stock reference imagery, not finished AI films, authentic client work, or actual delivered portfolio projects. Replace with original approved video work before removing sample disclosures. Files use fast-start MP4 metadata and together total approximately 2.6 MB.
+The eight full MP4 delivery files are lossless fast-start remuxes: their video and audio packet hashes match the supplied originals. Short muted previews are separately encoded for efficient hover playback. The offline HTML embeds compact full-length encodes to keep the single-file edition portable. WebP posters are frames extracted from those videos. The curated reel at `public/media/curated-reel.mp4` combines short excerpts from the selected collection; its poster at `public/media/curated-reel-poster.webp` uses a food close-up from Bombay Kitchen. Previews and the montage demonstrate the selection without loading every full film on the homepage.
 
-The hero montage sequences otherworld, velocity, and after-hours. Each individual clip uses the same slug as its matching sample project.
+All eight downloaded originals have H.264 video and audio tracks. Contact-sheet inspection established visual selection; audio tracks were detected in metadata, not listened to or transcribed during curation. No narration, historical claim, scientific claim, or campaign result is repeated as independently verified fact in the project descriptions.
 
-### Mayor Joe portrait preparation
+## Embedded branding
 
-`public/images/mayor-joe.webp` is a web-optimized, AI-prepared derivative of the portrait attached by Mayor Joe in this conversation. The inline attachment was not exposed as an original downloadable file in the execution workspace. The preparation retains his identity, grayscale presentation, wardrobe, composition, and EAZZY STUDIOS photographer watermark; it is not a byte-identical copy of the original. Generated source PNG is retained in the task workspace.
+- Bombay Kitchen contains Bombay Pizza Kitchen branding, a website and business phone in the supplied frames.
+- Popin Jobs is the source filename; the rendered app logo reads Poppin’ Jobs.
+- YouTube Motion Graphic 02 includes Domino’s imagery as part of its editorial subject.
+
+These source marks remain in their original visual context. They are not displayed as client endorsements, approved customer logos, or proof of commissioned work.
+
+## Retained illustrative comparison
+
+The color-grading demonstration uses the stock photograph at `public/images/comparison.webp`: https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=85 . It is a CSS treatment of one image, clearly labeled as an illustrative color study. It is separate from the selected video samples and is not a documented client before-and-after result.
+
+## Mayor Joe portrait preparation
+
+`public/images/mayor-joe.webp` is a web-optimized, AI-prepared derivative of the portrait attached by Mayor Joe in this conversation. The inline attachment was not exposed as an original downloadable file in the execution workspace. The preparation retains his identity, grayscale presentation, wardrobe, composition, and EAZZY STUDIOS photographer watermark; it is not a byte-identical copy of the original.
+
+The retained still-to-motion illustration uses `public/images/project-objects-in-motion.webp` and `public/videos/objects-in-motion.mp4`, a silent pan-and-zoom animation of this stock photograph: https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1400&q=85 . It remains clearly labeled as an illustrative reference, separate from the eight selected films.

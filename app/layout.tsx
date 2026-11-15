@@ -3,6 +3,7 @@ import './fonts.css';
 import './globals.css';
 import './personal.css';
 import './sales.css';
+import './collection.css';
 import MotionEffects from '@/components/MotionEffects';
 import { seo, studio } from '@/data/content';
 const origin=seo.siteUrl;

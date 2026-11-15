@@ -14,7 +14,7 @@ Add genuine entries to `testimonials` in `data/content.ts`, including `approved:
 
 ## Add measured case studies
 
-The current project gallery and three homepage breakdowns are clearly labeled sample creative blueprints using stock references. Their measurement plans are proposed metrics, not achieved results. Replace each with approved real project material before presenting it as a client case study. For performance figures, retain the reporting period, denominator, attribution method, client approval, and supporting source. Do not turn a forecast or industry statistic into an achieved result.
+The project gallery contains eight provided video samples from the identified Drive collection. Homepage film notes describe visible creative choices and retain source links; they do not claim verified client commissions or measured outcomes. Add approved production credits and actual reporting before presenting any film as a client performance case study. For performance figures, retain the reporting period, denominator, attribution method, client approval, and supporting source. Do not turn a forecast or industry statistic into an achieved result.
 
 ## Industry evidence
 

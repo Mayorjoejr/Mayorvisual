@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import Brand from './Brand';
 import { studio } from '@/data/content';
-const links = [['Packages','offers'],['The Work','work'],['Process','process'],['About','about']];
+const links = [['Films','work'],['Services','offers'],['Process','process'],['About','about']];
 export default function Header({ detail = false }: {detail?:boolean}) {
   const menu = useRef<HTMLDialogElement>(null);
   const href = (id:string) => `${detail?'/':''}#${id}`;
